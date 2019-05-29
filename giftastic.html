@@ -12,6 +12,34 @@
   <button data-person="Harold">Herald</button>
   <button data-person="Stoop Kid">Stoop Kid</button>
 
-  
+<div id="showgifhere">
+
+</div>
+
+<!-- This is the JQuery Link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- This is the JavaScript script -->
+<script type="text/javascript">
+
+// We are adding an event listener for all button elements.
+$("button").on(this).attr("data-person");
+
+// Now we are adding a URL to search Giphy for the character in Hey Arnold! 
+// Remember we can also modify the number of results here by playing around with 10
+var queryURL =  "https://api.giphy.com/v1/gifs/search?q=" +
+        person + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+
+// We will perform the AJAX GET request here
+$.ajax({
+  url: queryURL,
+  method: "Get"
+})
+
+// 
+
+</script>
+
 </body>
 </html>
